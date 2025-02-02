@@ -1635,8 +1635,15 @@ article .article__body p,
 article .article__header p {
   font-weight: 300;
   margin-bottom: 10px;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (min-width: 720px) {
+  article .article__body p,
+  article .article__header p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 article .article__icon {
   margin-bottom: 20px;
@@ -1660,25 +1667,60 @@ article.article--feature .article__body p {
   margin-bottom: 0;
 }
 article.article--service {
-  min-height: 220px;
+  min-height: 250px;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  padding: 10px;
+}
+@media (min-width: 720px) {
+  article.article--service {
+    min-height: 220px;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    padding: 20px;
+  }
 }
 article.article--service .article__icon {
-  width: 20%;
   margin-right: 10px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
-article.article--service .article__body {
-  width: 80%;
+@media (min-width: 720px) {
+  article.article--service .article__icon {
+    margin-bottom: 0;
+    width: 20%;
+  }
+}
+article.article--service .article__icon img {
+  width: 50px;
+}
+@media (min-width: 720px) {
+  article.article--service .article__icon img {
+    width: 60px;
+  }
+}
+@media (min-width: 720px) {
+  article.article--service .article__body {
+    width: 80%;
+  }
 }
 article.article--service .article__body .article__title {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 20px;
+}
+@media (min-width: 720px) {
+  article.article--service .article__body .article__title {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+article.article--service .article__body .btn {
+  width: 100%;
 }
 article.article--testimony {
   display: -ms-flexbox;
@@ -1844,7 +1886,7 @@ article.article--plan .article__footer .btn {
   text-align: center;
   font-weight: bold;
   border-radius: 10px;
-  min-width: 180px;
+  min-width: 150px;
   transition: 0.2s;
 }
 .btn span {
@@ -2101,6 +2143,9 @@ footer .footer__wrap {
     max-width: 1400px;
   }
 }
+footer .footer__wrap.footer__wrap--min {
+  padding: 20px 20px;
+}
 @media (min-width: 720px) {
   footer .footer__wrap.footer__wrap--min {
     padding: 20px 20px;
@@ -2201,13 +2246,16 @@ footer .footer__nav ul li a {
 footer .footer__copyright,
 footer .footer__terms {
   text-align: center;
-  margin-bottom: 20px;
 }
 @media (min-width: 720px) {
   footer .footer__copyright,
   footer .footer__terms {
     margin-bottom: 0;
   }
+}
+footer .footer__copyright p,
+footer .footer__terms p {
+  padding-bottom: 0;
 }
 footer .footer__copyright .footer__description,
 footer .footer__terms .footer__description {
@@ -3362,7 +3410,6 @@ section {
   color: #180f2b;
   overflow: hidden;
   text-align: left;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 section .section__bg {
   position: absolute;
@@ -3778,7 +3825,13 @@ section.section--hero .section__content .section__title span img {
   }
 }
 section.section--hero .section__buttons .btn:first-child {
-  margin-right: 10px;
+  margin-bottom: 10px;
+}
+@media (min-width: 720px) {
+  section.section--hero .section__buttons .btn:first-child {
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
 }
 section.section--media .section__eff {
   position: absolute;
@@ -3825,11 +3878,22 @@ section.section--media .section__content {
 }
 section.section--features .section__eff {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
 }
+@media (min-width: 720px) {
+  section.section--features .section__eff {
+    bottom: initial;
+    top: 0;
+  }
+}
 section.section--features .section__eff img {
-  width: 600px;
+  width: 300px;
+}
+@media (min-width: 720px) {
+  section.section--features .section__eff img {
+    width: 600px;
+  }
 }
 section.section--content .section__eff {
   position: absolute;
