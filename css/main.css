@@ -1635,7 +1635,7 @@ article .article__body p,
 article .article__header p {
   font-weight: 300;
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 }
 @media (min-width: 720px) {
@@ -1652,13 +1652,18 @@ article .article__icon img {
   margin: initial;
 }
 article.article--feature {
-  min-height: 260px;
+  min-height: 200px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
+}
+@media (min-width: 720px) {
+  article.article--feature {
+    min-height: 260px;
+  }
 }
 article.article--feature .article__icon img {
   width: 70px;
